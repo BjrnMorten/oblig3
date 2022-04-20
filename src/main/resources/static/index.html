@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="application/javascript" src="javas.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Bestilling av kinobilletter</h1>
+    </div>
+    <div class="container">
+        <div class = "row">
+            <div class = "col-md-4">
+                <form class ="form">
+                    <div class = "form group">
+                        <h4>Velg film:</h4>
+                        <select id="film" onchange="velgFilm()">
+                            <option value="1">Velg film her</option>
+                            <option value="2">The Big Lebowski (1998)</option>
+                            <option value="3">Titanic (1997)</option>
+                            <option value="4">The Lighthouse (2019)</option>
+                            <option value="5">Batman Begins (2005)</option>
+                        </select>
+                    </div>
+
+
+                    <div class = "form group">
+                        <label for="antall">Antall</label>
+                        <input type="number" class = "form-control" name="antall" id="antall" />
+                    </div>
+
+                    <div class = "form group">
+                       <label for="fornavn">Fornavn</label>
+                       <input type="text" class = "form-control" name="fornavn" id="fornavn" />
+                    </div>
+
+                    <div class = "form group">
+                        <label for="etternavn">Etternavn</label>
+                        <input type="text" class = "form-control" name="etternavn" id="etternavn" />
+                    </div>
+
+                    <div class = "form group">
+                       <label for="telefonnr">Telefon nr.</label>
+                       <input type="text" class = "form-control" id="telefonnr" />
+                    </div>
+
+                    <div class = "form group">
+                        <label for="epost">Epost</label>
+                        <input type="text" class = "form-control" name="epost" id="epost" />
+                    </div>
+                </form>
+
+                <button class = "btn btn-primary" value="Kjøp billett" onclick="kjop()">Kjøp billett</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class = "col-md-8">
+        <div>
+            <h3>Alle billeter</h3>
+        </div>
+
+        <table class = 'table table-striped' id="table-results">
+            <tr>
+                <th>Film</th>
+                <th>Antall</th>
+                <th>Fornavn</th>
+                <th>Etternavn</th>
+                <th>Telefon Nr.</th>
+                <th>Epost</th>
+            </tr>
+        </table>
+
+        <button class = "btn btn-danger" value="Slett billett" onclick="slett()">Slett billetter</button>
+    </div>
+</body>
+
+</html>
